@@ -9,6 +9,10 @@ public class Relations : MonoBehaviour
     public int[,] nationalrelations = new int[5,5];
 
     public int[] relations = new int[5];
+
+    public int chaos;
+
+    public int marketStability;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

@@ -22,7 +22,11 @@ public class Kessler : MonoBehaviour
 
     public TMP_Text date;
 
-    private int year;
+    public int totalDebris;
+
+    public List<int> queue = new List<int>();
+
+    public GameObject[] notifications;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -35,7 +39,7 @@ public class Kessler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        totalDebris = LEOobjects.Count + MEOobjects.Count + GEOobjects.Count + Otherobjects.Count;
     }
 
     public void NextTurn()
@@ -46,9 +50,16 @@ public class Kessler : MonoBehaviour
         DebrisSpawner.SpawnGEOobjects((int)(GEOobjects.Count * 0.15f), 0.01f);
         DebrisSpawner.SpawnOtherobjects((int)(Otherobjects.Count * 0.25f), 0.01f);
         Time++;
-        //if(Time)
         date.text = "Q" + (Mathf.Repeat(Time, 4) + 1) + " " + (2035 + (int)(Time/4));
 
 
+    }
+
+    public void NextMail()
+    {
+        if(queue.Count > 0)
+        {
+            
+        }
     }
 }
