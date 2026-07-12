@@ -10,10 +10,10 @@ public class DebrisSpawner : MonoBehaviour
     void Start()
     {
         me=this;
-        SpawnLEOobjects(100, 0.01f);
-        SpawnMEOobjects(100, 0.01f);
-        SpawnGEOobjects(100, 0.01f);
-        SpawnOtherobjects(120, 0.01f);
+        SpawnLEOobjects(50, 0.01f);
+        SpawnMEOobjects(50, 0.01f);
+        SpawnGEOobjects(50, 0.01f);
+        SpawnOtherobjects(60, 0.01f);
 
 
     }
